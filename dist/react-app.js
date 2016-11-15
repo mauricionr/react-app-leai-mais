@@ -58,7 +58,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(2);
 	var HelloWorld_1 = __webpack_require__(3);
-	ReactDOM.render(React.createElement(HelloWorld_1.Hello, {description: 'Hello World from web-library-build'}), document.getElementById('example'));
+	var webparts = document.getElementsByClassName('webpart-script-example');
+	for (var i = 0; i < webparts.length; i++) {
+	    // Get the data property from the Element
+	    var description = webparts[i].getAttribute("data-description").toString();
+	    ReactDOM.render(React.createElement(HelloWorld_1.Hello, {description: description}), webparts[i]);
+	}
 	
 	//# sourceMappingURL=index.js.map
 
@@ -391,32 +396,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	__export(__webpack_require__(19));
 	__export(__webpack_require__(89));
 	__export(__webpack_require__(97));
-	__export(__webpack_require__(141));
-	__export(__webpack_require__(156));
-	__export(__webpack_require__(176));
+	__export(__webpack_require__(142));
+	__export(__webpack_require__(157));
+	__export(__webpack_require__(177));
 	__export(__webpack_require__(31));
-	__export(__webpack_require__(180));
-	__export(__webpack_require__(184));
-	__export(__webpack_require__(10));
+	__export(__webpack_require__(181));
 	__export(__webpack_require__(185));
+	__export(__webpack_require__(10));
+	__export(__webpack_require__(111));
 	__export(__webpack_require__(56));
 	__export(__webpack_require__(68));
 	__export(__webpack_require__(27));
-	__export(__webpack_require__(115));
-	__export(__webpack_require__(128));
+	__export(__webpack_require__(116));
+	__export(__webpack_require__(129));
 	__export(__webpack_require__(186));
 	__export(__webpack_require__(191));
 	__export(__webpack_require__(195));
-	__export(__webpack_require__(147));
+	__export(__webpack_require__(148));
 	__export(__webpack_require__(198));
 	__export(__webpack_require__(203));
-	__export(__webpack_require__(163));
+	__export(__webpack_require__(164));
 	__export(__webpack_require__(209));
 	__export(__webpack_require__(212));
 	__export(__webpack_require__(218));
 	__export(__webpack_require__(222));
 	__export(__webpack_require__(226));
-	__export(__webpack_require__(122));
+	__export(__webpack_require__(123));
 	__export(__webpack_require__(65));
 	__export(__webpack_require__(230));
 	/* Special cases that will be removed once we've moved utilities out into a common location. */
@@ -3656,7 +3661,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	var load_themed_styles_1 = __webpack_require__(35);
-	load_themed_styles_1.loadStyles('.ms-Button{color:"[theme:neutralPrimary, default: #333333]";font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px;font-weight:400;box-sizing:border-box;margin:0;padding:0;box-shadow:none;background-color:"[theme:neutralLighter, default: #f4f4f4]";border:1px solid "[theme:neutralLighter, default: #f4f4f4]";cursor:pointer;display:inline-block;height:32px;min-width:80px;padding:4px 20px 6px}.ms-Button:hover{background-color:"[theme:neutralLight, default: #eaeaea]";border-color:"[theme:neutralLight, default: #eaeaea]";outline:1px solid transparent}.ms-Button:hover .ms-Button-label{color:"[theme:black, default: #000000]"}.ms-Button:focus{background-color:"[theme:neutralLight, default: #eaeaea]";border-color:"[theme:themePrimary, default: #0078d7]";outline:1px solid transparent}.ms-Button:focus .ms-Button-label{color:"[theme:black, default: #000000]"}.ms-Button:active{background-color:"[theme:themePrimary, default: #0078d7]";border-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button:active .ms-Button-label{color:"[theme:white, default: #ffffff]"}.ms-Button.is-disabled,.ms-Button:disabled{background-color:"[theme:neutralLighter, default: #f4f4f4]";border-color:"[theme:neutralLighter, default: #f4f4f4]";cursor:default}.ms-Button.is-disabled .ms-Button-label,.ms-Button:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.is-disabled:focus,.ms-Button.is-disabled:hover,.ms-Button:disabled:focus,.ms-Button:disabled:hover{outline:0}.ms-Button+.ms-Button{margin-left:6px}.ms-Button-label{color:"[theme:neutralPrimary, default: #333333]";font-family:"Segoe UI Semibold WestEuropean","Segoe UI Semibold","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px}.ms-Button-description,.ms-Button-icon{display:none}.ms-Button.ms-Button--primary{background-color:"[theme:themePrimary, default: #0078d7]";border-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--primary .ms-Button-label{color:"[theme:white, default: #ffffff]"}.ms-Button.ms-Button--primary:hover{background-color:"[theme:themeDark, default: #005a9e]";border-color:"[theme:themeDark, default: #005a9e]"}.ms-Button.ms-Button--primary:focus{background-color:"[theme:themeDark, default: #005a9e]";border-color:"[theme:themeDarker, default: #004578]"}.ms-Button.ms-Button--primary:active{background-color:"[theme:themePrimary, default: #0078d7]";border-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--primary.is-disabled,.ms-Button.ms-Button--primary:disabled{background-color:"[theme:neutralLighter, default: #f4f4f4]";border-color:"[theme:neutralLighter, default: #f4f4f4]"}.ms-Button.ms-Button--primary.is-disabled .ms-Button-label,.ms-Button.ms-Button--primary:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--hero{background-color:transparent;border:none;vertical-align:top;line-height:normal}.ms-Button.ms-Button--hero .ms-Button-icon{color:"[theme:themePrimary, default: #0078d7]";display:inline-block;font-size:12px;position:relative;top:-8px;text-align:center}.ms-Button.ms-Button--hero .ms-Button-icon .ms-Icon{border-radius:18px;border:1px solid "[theme:themePrimary, default: #0078d7]";height:18px;line-height:18px;width:18px;font-size:12px;margin:0}.ms-Button.ms-Button--hero .ms-Button-label{color:"[theme:themePrimary, default: #0078d7]";font-family:"Segoe UI Light WestEuropean","Segoe UI Light","Segoe UI",Tahoma,Arial,sans-serif;font-size:21px;position:relative;top:-5px;text-decoration:none}.ms-Button.ms-Button--hero:focus .ms-Button-icon .ms-Icon,.ms-Button.ms-Button--hero:hover .ms-Button-icon .ms-Icon{color:"[theme:themeDark, default: #005a9e]"}.ms-Button.ms-Button--hero:focus .ms-Button-label,.ms-Button.ms-Button--hero:hover .ms-Button-label{color:"[theme:themeDarker, default: #004578]"}.ms-Button.ms-Button--hero:active .ms-Button-icon .ms-Icon{color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--hero:active .ms-Button-label{color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--hero.is-disabled .ms-Button-icon .ms-Icon,.ms-Button.ms-Button--hero:disabled .ms-Button-icon .ms-Icon{color:"[theme:neutralTertiaryAlt, default: #c8c8c8]"}.ms-Button.ms-Button--hero.is-disabled .ms-Button-label,.ms-Button.ms-Button--hero:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--compound{height:auto;min-height:72px;max-width:280px;padding:20px}.ms-Button.ms-Button--compound .ms-Button-label{display:block;font-family:"Segoe UI Semibold WestEuropean","Segoe UI Semibold","Segoe UI",Tahoma,Arial,sans-serif;position:relative;text-align:left;margin-top:-5px}.ms-Button.ms-Button--compound .ms-Button-description{color:"[theme:neutralSecondary, default: #666666]";display:block;font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif;font-size:12px;position:relative;text-align:left;top:3px}.ms-Button.ms-Button--compound:hover .ms-Button-description{color:"[theme:neutralDark, default: #212121]"}.ms-Button.ms-Button--compound:focus{border-color:"[theme:themePrimary, default: #0078d7]";background-color:"[theme:neutralLighter, default: #f4f4f4]"}.ms-Button.ms-Button--compound:focus .ms-Button-label{color:"[theme:neutralPrimary, default: #333333]"}.ms-Button.ms-Button--compound:focus .ms-Button-description{color:"[theme:neutralSecondary, default: #666666]"}.ms-Button.ms-Button--compound:active{background-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--compound:active .ms-Button-description,.ms-Button.ms-Button--compound:active .ms-Button-label{color:"[theme:white, default: #ffffff]"}.ms-Button.ms-Button--compound.is-disabled .ms-Button-description,.ms-Button.ms-Button--compound.is-disabled .ms-Button-label,.ms-Button.ms-Button--compound:disabled .ms-Button-description,.ms-Button.ms-Button--compound:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--compound.is-disabled:active,.ms-Button.ms-Button--compound.is-disabled:focus,.ms-Button.ms-Button--compound:disabled:active,.ms-Button.ms-Button--compound:disabled:focus{border-color:"[theme:neutralLighter, default: #f4f4f4]";background-color:"[theme:neutralLighter, default: #f4f4f4]"}.ms-Button.ms-Button--compound.is-disabled:active .ms-Button-description,.ms-Button.ms-Button--compound.is-disabled:active .ms-Button-label,.ms-Button.ms-Button--compound.is-disabled:focus .ms-Button-description,.ms-Button.ms-Button--compound.is-disabled:focus .ms-Button-label,.ms-Button.ms-Button--compound:disabled:active .ms-Button-description,.ms-Button.ms-Button--compound:disabled:active .ms-Button-label,.ms-Button.ms-Button--compound:disabled:focus .ms-Button-description,.ms-Button.ms-Button--compound:disabled:focus .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--command{background-color:transparent;border:none;height:32px;line-height:32px;min-width:0;padding:0 8px;text-align:left;font-size:14px}.ms-Button.ms-Button--command .ms-Button-icon{color:"[theme:neutralSecondary, default: #666666]";display:inline-block;margin-right:4px;position:relative}.ms-Button.ms-Button--command .ms-Button-label{font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif}.ms-Button.ms-Button--command:focus .ms-Button-icon,.ms-Button.ms-Button--command:hover .ms-Button-icon{color:"[theme:neutralDark, default: #212121]"}.ms-Button.ms-Button--command:focus .ms-Button-label,.ms-Button.ms-Button--command:hover .ms-Button-label{color:"[theme:black, default: #000000]"}.ms-Button.ms-Button--command:active .ms-Button-icon,.ms-Button.ms-Button--command:active .ms-Button-label{color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--command.is-disabled .ms-Button-icon,.ms-Button.ms-Button--command:disabled .ms-Button-icon{color:"[theme:neutralTertiaryAlt, default: #c8c8c8]"}.ms-Button.ms-Button--command.is-disabled .ms-Button-label,.ms-Button.ms-Button--command:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--command+.ms-Button.ms-Button--command{margin-left:14px}.ms-Button--icon{background-color:transparent;padding:0;min-width:auto;height:auto;border:0}.ms-Button--icon:hover{background-color:transparent;border-color:transparent;outline-color:transparent}.ms-Button--icon:focus{background-color:transparent}.ms-Button--icon .ms-Button-icon{display:inline}.ms-Button.ms-Button--primary.disabled{background-color:"[theme:neutralLighter, default: #f4f4f4]";border-color:"[theme:neutralLighter, default: #f4f4f4]";pointer-events:none;cursor:default}.ms-Button.ms-Button--primary.disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}html[dir=ltr] .ms-Button+.ms-Button{margin-left:6px}html[dir=rtl] .ms-Button+.ms-Button{margin-right:6px}html[dir=ltr] .ms-Button.ms-Button--command{text-align:left}html[dir=rtl] .ms-Button.ms-Button--command{text-align:right}html[dir=ltr] .ms-Button.ms-Button--command .ms-Button-icon{margin-right:4px}html[dir=rtl] .ms-Button.ms-Button--command .ms-Button-icon{margin-left:4px}html[dir=ltr] .ms-Button.ms-Button--command+.ms-Button.ms-Button--command{margin-left:14px}html[dir=rtl] .ms-Button.ms-Button--command+.ms-Button.ms-Button--command{margin-right:14px}html[dir=ltr] .ms-Button.ms-Button--compound .ms-Button-label{text-align:left}html[dir=rtl] .ms-Button.ms-Button--compound .ms-Button-label{text-align:right}html[dir=ltr] .ms-Button.ms-Button--compound .ms-Button-description{text-align:left}html[dir=rtl] .ms-Button.ms-Button--compound .ms-Button-description{text-align:right}a.ms-Button{text-decoration:none;text-align:center}');
+	load_themed_styles_1.loadStyles('.ms-Button{color:"[theme:neutralPrimary, default: #333333]";font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px;font-weight:400;box-sizing:border-box;margin:0;padding:0;box-shadow:none;background-color:"[theme:neutralLighter, default: #f4f4f4]";border:1px solid "[theme:neutralLighter, default: #f4f4f4]";cursor:pointer;display:inline-block;height:32px;min-width:80px;padding:4px 20px 6px}.ms-Button:hover{background-color:"[theme:neutralLight, default: #eaeaea]";border-color:"[theme:neutralLight, default: #eaeaea]";outline:1px solid transparent}.ms-Button:hover .ms-Button-label{color:"[theme:black, default: #000000]"}.ms-Button:focus{background-color:"[theme:neutralLight, default: #eaeaea]";border-color:"[theme:themePrimary, default: #0078d7]";outline:1px solid transparent}.ms-Button:focus .ms-Button-label{color:"[theme:black, default: #000000]"}.ms-Button:active{background-color:"[theme:themePrimary, default: #0078d7]";border-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button:active .ms-Button-label{color:"[theme:white, default: #ffffff]"}.ms-Button.is-disabled,.ms-Button:disabled{background-color:"[theme:neutralLighter, default: #f4f4f4]";border-color:"[theme:neutralLighter, default: #f4f4f4]";cursor:default}.ms-Button.is-disabled .ms-Button-label,.ms-Button:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.is-disabled:focus,.ms-Button.is-disabled:hover,.ms-Button:disabled:focus,.ms-Button:disabled:hover{outline:0}.ms-Button+.ms-Button{margin-left:6px}.ms-Button-label{color:"[theme:neutralPrimary, default: #333333]";font-family:"Segoe UI Semibold WestEuropean","Segoe UI Semibold","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px}.ms-Button-description,.ms-Button-icon{display:none}.ms-Button.ms-Button--primary{background-color:"[theme:themePrimary, default: #0078d7]";border-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--primary .ms-Button-label{color:"[theme:white, default: #ffffff]"}.ms-Button.ms-Button--primary:hover{background-color:"[theme:themeDark, default: #005a9e]";border-color:"[theme:themeDark, default: #005a9e]"}.ms-Button.ms-Button--primary:focus{background-color:"[theme:themeDark, default: #005a9e]";border-color:"[theme:themeDarker, default: #004578]"}.ms-Button.ms-Button--primary:active{background-color:"[theme:themePrimary, default: #0078d7]";border-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--primary.is-disabled,.ms-Button.ms-Button--primary:disabled{background-color:"[theme:neutralLighter, default: #f4f4f4]";border-color:"[theme:neutralLighter, default: #f4f4f4]"}.ms-Button.ms-Button--primary.is-disabled .ms-Button-label,.ms-Button.ms-Button--primary:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--hero{background-color:transparent;border:none;vertical-align:top;line-height:normal}.ms-Button.ms-Button--hero .ms-Button-icon{color:"[theme:themePrimary, default: #0078d7]";display:inline-block;font-size:12px;position:relative;top:-8px;text-align:center}.ms-Button.ms-Button--hero .ms-Button-icon .ms-Icon{border-radius:18px;border:1px solid "[theme:themePrimary, default: #0078d7]";height:18px;line-height:18px;width:18px;font-size:12px;margin:0}.ms-Button.ms-Button--hero .ms-Button-label{color:"[theme:themePrimary, default: #0078d7]";font-family:"Segoe UI Light WestEuropean","Segoe UI Light","Segoe UI",Tahoma,Arial,sans-serif;font-size:21px;position:relative;top:-5px;text-decoration:none}.ms-Button.ms-Button--hero:focus .ms-Button-icon .ms-Icon,.ms-Button.ms-Button--hero:hover .ms-Button-icon .ms-Icon{color:"[theme:themeDark, default: #005a9e]"}.ms-Button.ms-Button--hero:focus .ms-Button-label,.ms-Button.ms-Button--hero:hover .ms-Button-label{color:"[theme:themeDarker, default: #004578]"}.ms-Button.ms-Button--hero:active .ms-Button-icon .ms-Icon{color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--hero:active .ms-Button-label{color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--hero.is-disabled .ms-Button-icon .ms-Icon,.ms-Button.ms-Button--hero:disabled .ms-Button-icon .ms-Icon{color:"[theme:neutralTertiaryAlt, default: #c8c8c8]"}.ms-Button.ms-Button--hero.is-disabled .ms-Button-label,.ms-Button.ms-Button--hero:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--compound{height:auto;min-height:72px;max-width:280px;padding:20px}.ms-Button.ms-Button--compound .ms-Button-label{display:block;font-family:"Segoe UI Semibold WestEuropean","Segoe UI Semibold","Segoe UI",Tahoma,Arial,sans-serif;position:relative;text-align:left;margin-top:-5px}.ms-Button.ms-Button--compound .ms-Button-description{color:"[theme:neutralSecondary, default: #666666]";display:block;font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif;font-size:12px;position:relative;text-align:left;top:3px}.ms-Button.ms-Button--compound:hover .ms-Button-description{color:"[theme:neutralDark, default: #212121]"}.ms-Button.ms-Button--compound:focus{border-color:"[theme:themePrimary, default: #0078d7]";background-color:"[theme:neutralLighter, default: #f4f4f4]"}.ms-Button.ms-Button--compound:focus .ms-Button-label{color:"[theme:neutralPrimary, default: #333333]"}.ms-Button.ms-Button--compound:focus .ms-Button-description{color:"[theme:neutralSecondary, default: #666666]"}.ms-Button.ms-Button--compound:active{background-color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--compound:active .ms-Button-description,.ms-Button.ms-Button--compound:active .ms-Button-label{color:"[theme:white, default: #ffffff]"}.ms-Button.ms-Button--compound.is-disabled .ms-Button-description,.ms-Button.ms-Button--compound.is-disabled .ms-Button-label,.ms-Button.ms-Button--compound:disabled .ms-Button-description,.ms-Button.ms-Button--compound:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--compound.is-disabled:active,.ms-Button.ms-Button--compound.is-disabled:focus,.ms-Button.ms-Button--compound:disabled:active,.ms-Button.ms-Button--compound:disabled:focus{border-color:"[theme:neutralLighter, default: #f4f4f4]";background-color:"[theme:neutralLighter, default: #f4f4f4]"}.ms-Button.ms-Button--compound.is-disabled:active .ms-Button-description,.ms-Button.ms-Button--compound.is-disabled:active .ms-Button-label,.ms-Button.ms-Button--compound.is-disabled:focus .ms-Button-description,.ms-Button.ms-Button--compound.is-disabled:focus .ms-Button-label,.ms-Button.ms-Button--compound:disabled:active .ms-Button-description,.ms-Button.ms-Button--compound:disabled:active .ms-Button-label,.ms-Button.ms-Button--compound:disabled:focus .ms-Button-description,.ms-Button.ms-Button--compound:disabled:focus .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--command{background-color:transparent;border:none;height:32px;line-height:32px;min-width:0;padding:0 8px;text-align:left;font-size:14px}.ms-Button.ms-Button--command .ms-Button-icon{color:"[theme:neutralSecondary, default: #666666]";display:inline-block;margin-right:4px;position:relative}.ms-Button.ms-Button--command .ms-Button-label{font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif}.ms-Button.ms-Button--command:focus .ms-Button-icon,.ms-Button.ms-Button--command:hover .ms-Button-icon{color:"[theme:neutralDark, default: #212121]"}.ms-Button.ms-Button--command:focus .ms-Button-label,.ms-Button.ms-Button--command:hover .ms-Button-label{color:"[theme:black, default: #000000]"}.ms-Button.ms-Button--command:active .ms-Button-icon,.ms-Button.ms-Button--command:active .ms-Button-label{color:"[theme:themePrimary, default: #0078d7]"}.ms-Button.ms-Button--command.is-disabled .ms-Button-icon,.ms-Button.ms-Button--command:disabled .ms-Button-icon{color:"[theme:neutralTertiaryAlt, default: #c8c8c8]"}.ms-Button.ms-Button--command.is-disabled .ms-Button-label,.ms-Button.ms-Button--command:disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}.ms-Button.ms-Button--command+.ms-Button.ms-Button--command{margin-left:14px}.ms-Button--icon{background-color:transparent;color:"[theme:neutralSecondary, default: #666666]";padding:0;min-width:auto;height:auto;border:0}.ms-Fabric .ms-Button--icon::-moz-focus-inner{border:0}.ms-Fabric .ms-Button--icon{outline:transparent;position:relative}.ms-Fabric.is-focusVisible .ms-Button--icon:focus:before{content:\'\';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid "[theme:neutralSecondaryAlt, default: #767676]"}.ms-Button--icon:active,.ms-Button--icon:hover{background-color:transparent;border-color:transparent;outline-color:transparent;color:"[theme:neutralPrimary, default: #333333]"}.ms-Button--icon:focus{background-color:transparent}.ms-Button--icon .ms-Icon{font-size:16px;padding:8px}.ms-Button--icon .ms-Button-icon{display:inline}.ms-Button--icon.is-disabled,.ms-Button--icon:disabled{color:"[theme:neutralTertiaryAlt, default: #c8c8c8]";background-color:transparent}@media screen and (-ms-high-contrast:active){.ms-Button--icon{color:"[theme:yellowLight, default: #fff100]"}}@media screen and (-ms-high-contrast:black-on-white){.ms-Button--icon{color:"[theme:blueMid, default: #00188f]"}}.ms-Button.ms-Button--primary.disabled{background-color:"[theme:neutralLighter, default: #f4f4f4]";border-color:"[theme:neutralLighter, default: #f4f4f4]";pointer-events:none;cursor:default}.ms-Button.ms-Button--primary.disabled .ms-Button-label{color:"[theme:neutralTertiary, default: #a6a6a6]"}html[dir=ltr] .ms-Button+.ms-Button{margin-left:6px}html[dir=rtl] .ms-Button+.ms-Button{margin-right:6px}html[dir=ltr] .ms-Button.ms-Button--command{text-align:left}html[dir=rtl] .ms-Button.ms-Button--command{text-align:right}html[dir=ltr] .ms-Button.ms-Button--command .ms-Button-icon{margin-right:4px}html[dir=rtl] .ms-Button.ms-Button--command .ms-Button-icon{margin-left:4px}html[dir=ltr] .ms-Button.ms-Button--command+.ms-Button.ms-Button--command{margin-left:14px}html[dir=rtl] .ms-Button.ms-Button--command+.ms-Button.ms-Button--command{margin-right:14px}html[dir=ltr] .ms-Button.ms-Button--compound .ms-Button-label{text-align:left}html[dir=rtl] .ms-Button.ms-Button--compound .ms-Button-label{text-align:right}html[dir=ltr] .ms-Button.ms-Button--compound .ms-Button-description{text-align:left}html[dir=rtl] .ms-Button.ms-Button--compound .ms-Button-description{text-align:right}a.ms-Button{text-decoration:none;text-align:center}');
 	
 	//# sourceMappingURL=Button.scss.js.map
 
@@ -6120,7 +6125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	__export(__webpack_require__(99));
 	__export(__webpack_require__(100));
-	__export(__webpack_require__(133));
+	__export(__webpack_require__(134));
 	
 	//# sourceMappingURL=index.js.map
 
@@ -6147,15 +6152,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	var DetailsRow_1 = __webpack_require__(108);
 	var FocusZone_1 = __webpack_require__(10);
 	var GroupedList_1 = __webpack_require__(111);
-	var withViewport_1 = __webpack_require__(138);
+	var List_1 = __webpack_require__(129);
+	var withViewport_1 = __webpack_require__(139);
 	var object_1 = __webpack_require__(39);
 	var css_1 = __webpack_require__(17);
-	var index_1 = __webpack_require__(133);
+	var index_1 = __webpack_require__(134);
 	var EventGroup_1 = __webpack_require__(14);
 	var rtl_1 = __webpack_require__(16);
 	var KeyCodes_1 = __webpack_require__(15);
-	var DragDropHelper_1 = __webpack_require__(139);
-	__webpack_require__(140);
+	var DragDropHelper_1 = __webpack_require__(140);
+	__webpack_require__(141);
 	var MIN_COLUMN_WIDTH = 100; // this is the global min width
 	var CHECKBOX_WIDTH = 36;
 	var GROUP_EXPAND_WIDTH = 36;
@@ -6202,7 +6208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 	    DetailsList.prototype.componentWillReceiveProps = function (newProps) {
-	        var _a = this.props, items = _a.items, setKey = _a.setKey, selectionMode = _a.selectionMode, columns = _a.columns;
+	        var _a = this.props, items = _a.items, setKey = _a.setKey, selectionMode = _a.selectionMode, columns = _a.columns, viewport = _a.viewport;
 	        var layoutMode = this.state.layoutMode;
 	        var shouldResetSelection = (newProps.setKey !== setKey) || newProps.setKey === undefined;
 	        var shouldForceUpdates = false;
@@ -6214,7 +6220,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (newProps.items !== items) {
 	            this._selection.setItems(newProps.items, shouldResetSelection);
 	        }
-	        if (newProps.columns !== columns) {
+	        if (newProps.columns !== columns ||
+	            newProps.viewport.width !== viewport.width) {
 	            shouldForceUpdates = true;
 	        }
 	        this._adjustColumns(newProps, true, layoutMode);
@@ -6226,27 +6233,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 	    DetailsList.prototype.render = function () {
+	        var _this = this;
 	        var _a = this.props, ariaLabelForListHeader = _a.ariaLabelForListHeader, ariaLabelForSelectAllCheckbox = _a.ariaLabelForSelectAllCheckbox, className = _a.className, constrainMode = _a.constrainMode, dragDropEvents = _a.dragDropEvents, groups = _a.groups, groupProps = _a.groupProps, items = _a.items, isHeaderVisible = _a.isHeaderVisible, onItemInvoked = _a.onItemInvoked, onColumnHeaderClick = _a.onColumnHeaderClick, onColumnHeaderContextMenu = _a.onColumnHeaderContextMenu, selectionMode = _a.selectionMode, ariaLabel = _a.ariaLabel, ariaLabelForGrid = _a.ariaLabelForGrid, rowElementEventMap = _a.rowElementEventMap, _b = _a.shouldApplyApplicationRole, shouldApplyApplicationRole = _b === void 0 ? false : _b;
 	        var _c = this.state, adjustedColumns = _c.adjustedColumns, isCollapsed = _c.isCollapsed, layoutMode = _c.layoutMode, isSizing = _c.isSizing;
 	        var _d = this, selection = _d._selection, dragDropHelper = _d._dragDropHelper;
 	        var groupNestingDepth = this._getGroupNestingDepth();
+	        var additionalListProps = {
+	            renderedWindowsAhead: isSizing ? 0 : DEFAULT_RENDERED_WINDOWS_AHEAD,
+	            renderedWindowsBehind: isSizing ? 0 : DEFAULT_RENDERED_WINDOWS_BEHIND
+	        };
 	        return (
 	        // If shouldApplyApplicationRole is true, role application will be applied to make arrow keys work
 	        // with JAWS.
 	        React.createElement("div", {ref: 'root', className: css_1.css('ms-DetailsList', className, {
 	            'is-fixed': layoutMode === DetailsList_Props_1.DetailsListLayoutMode.fixedColumns,
 	            'is-horizontalConstrained': constrainMode === DetailsList_Props_1.ConstrainMode.horizontalConstrained
-	        }), "data-automationid": 'DetailsList', "data-is-scrollable": 'false', "aria-label": ariaLabel, role: shouldApplyApplicationRole ? 'application' : ''}, React.createElement("div", {ref: 'headerContainer', onKeyDown: this._onHeaderKeyDown, role: 'grid', "aria-label": ariaLabelForGrid}, isHeaderVisible && (React.createElement(DetailsHeader_1.DetailsHeader, {ref: 'header', selectionMode: selectionMode, layoutMode: layoutMode, selection: selection, columns: adjustedColumns, onColumnClick: onColumnHeaderClick, onColumnContextMenu: onColumnHeaderContextMenu, onColumnResized: this._onColumnResized, onColumnIsSizingChanged: this._onColumnIsSizingChanged, onColumnAutoResized: this._onColumnAutoResized, groupNestingDepth: groupNestingDepth, isAllCollapsed: isCollapsed, onToggleCollapseAll: this._onToggleCollapse, ariaLabel: ariaLabelForListHeader, ariaLabelForSelectAllCheckbox: ariaLabelForSelectAllCheckbox}))), React.createElement("div", {ref: 'contentContainer', onKeyDown: this._onContentKeyDown}, React.createElement(FocusZone_1.FocusZone, {ref: 'focusZone', direction: FocusZone_1.FocusZoneDirection.vertical, isInnerZoneKeystroke: function (ev) { return (ev.which === rtl_1.getRTLSafeKeyCode(KeyCodes_1.KeyCodes.right)); }, onActiveElementChanged: this._onActiveRowChanged}, React.createElement(index_1.SelectionZone, {selection: selection, selectionMode: selectionMode, onItemInvoked: onItemInvoked}, React.createElement(GroupedList_1.GroupedList, {groups: groups, groupProps: groupProps, items: items, onRenderCell: this._onRenderCell, selection: selection, selectionMode: selectionMode, dragDropEvents: dragDropEvents, dragDropHelper: dragDropHelper, eventsToRegister: rowElementEventMap, listProps: {
-	            renderedWindowsAhead: isSizing ? 0 : DEFAULT_RENDERED_WINDOWS_AHEAD,
-	            renderedWindowsBehind: isSizing ? 0 : DEFAULT_RENDERED_WINDOWS_BEHIND
-	        }, ref: 'groups'}))))));
+	        }), "data-automationid": 'DetailsList', "data-is-scrollable": 'false', "aria-label": ariaLabel, role: shouldApplyApplicationRole ? 'application' : ''}, React.createElement("div", {ref: 'headerContainer', onKeyDown: this._onHeaderKeyDown, role: 'grid', "aria-label": ariaLabelForGrid}, isHeaderVisible && (React.createElement(DetailsHeader_1.DetailsHeader, {ref: 'header', selectionMode: selectionMode, layoutMode: layoutMode, selection: selection, columns: adjustedColumns, onColumnClick: onColumnHeaderClick, onColumnContextMenu: onColumnHeaderContextMenu, onColumnResized: this._onColumnResized, onColumnIsSizingChanged: this._onColumnIsSizingChanged, onColumnAutoResized: this._onColumnAutoResized, groupNestingDepth: groupNestingDepth, isAllCollapsed: isCollapsed, onToggleCollapseAll: this._onToggleCollapse, ariaLabel: ariaLabelForListHeader, ariaLabelForSelectAllCheckbox: ariaLabelForSelectAllCheckbox}))), React.createElement("div", {ref: 'contentContainer', onKeyDown: this._onContentKeyDown}, React.createElement(FocusZone_1.FocusZone, {ref: 'focusZone', direction: FocusZone_1.FocusZoneDirection.vertical, isInnerZoneKeystroke: function (ev) { return (ev.which === rtl_1.getRTLSafeKeyCode(KeyCodes_1.KeyCodes.right)); }, onActiveElementChanged: this._onActiveRowChanged}, React.createElement(index_1.SelectionZone, {selection: selection, selectionMode: selectionMode, onItemInvoked: onItemInvoked}, groups ? (React.createElement(GroupedList_1.GroupedList, {groups: groups, groupProps: groupProps, items: items, onRenderCell: this._onRenderCell, selection: selection, selectionMode: selectionMode, dragDropEvents: dragDropEvents, dragDropHelper: dragDropHelper, eventsToRegister: rowElementEventMap, listProps: additionalListProps, ref: 'groups'})) : (React.createElement(List_1.List, React.__spread({items: items, onRenderCell: function (item, itemIndex) { return _this._onRenderCell(0, item, itemIndex); }}, additionalListProps, {ref: 'list'}))))))));
 	    };
 	    DetailsList.prototype.forceUpdate = function () {
 	        _super.prototype.forceUpdate.call(this);
 	        this._forceListUpdates();
 	    };
 	    DetailsList.prototype._onRenderCell = function (nestingDepth, item, index) {
-	        var _a = this.props, dragDropEvents = _a.dragDropEvents, eventsToRegister = _a.rowElementEventMap, onRenderMissingItem = _a.onRenderMissingItem, onRowDidMount = _a.onRowDidMount, onRowWillUnmount = _a.onRowWillUnmount, onRenderItemColumn = _a.onRenderItemColumn, selectionMode = _a.selectionMode, viewport = _a.viewport, checkboxVisibility = _a.checkboxVisibility, getRowAriaLabel = _a.getRowAriaLabel, canSelectItem = _a.canSelectItem, checkButtonAriaLabel = _a.checkButtonAriaLabel;
+	        var _a = this.props, dragDropEvents = _a.dragDropEvents, eventsToRegister = _a.rowElementEventMap, onRenderMissingItem = _a.onRenderMissingItem, onRenderItemColumn = _a.onRenderItemColumn, selectionMode = _a.selectionMode, viewport = _a.viewport, checkboxVisibility = _a.checkboxVisibility, getRowAriaLabel = _a.getRowAriaLabel, canSelectItem = _a.canSelectItem, checkButtonAriaLabel = _a.checkButtonAriaLabel;
 	        var selection = this._selection;
 	        var dragDropHelper = this._dragDropHelper;
 	        var columns = this.state.adjustedColumns;
@@ -6256,7 +6265,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	            return null;
 	        }
-	        return (React.createElement(DetailsRow_1.DetailsRow, {item: item, itemIndex: index, columns: columns, groupNestingDepth: nestingDepth, selectionMode: selectionMode, selection: selection, onDidMount: onRowDidMount, onWillUnmount: onRowWillUnmount, onRenderItemColumn: onRenderItemColumn, eventsToRegister: eventsToRegister, dragDropEvents: dragDropEvents, dragDropHelper: dragDropHelper, viewport: viewport, checkboxVisibility: checkboxVisibility, getRowAriaLabel: getRowAriaLabel, canSelectItem: canSelectItem, checkButtonAriaLabel: checkButtonAriaLabel}));
+	        return (React.createElement(DetailsRow_1.DetailsRow, {item: item, itemIndex: index, columns: columns, groupNestingDepth: nestingDepth, selectionMode: selectionMode, selection: selection, onDidMount: this._onRowDidMount, onWillUnmount: this._onRowWillUnmount, onRenderItemColumn: onRenderItemColumn, eventsToRegister: eventsToRegister, dragDropEvents: dragDropEvents, dragDropHelper: dragDropHelper, viewport: viewport, checkboxVisibility: checkboxVisibility, getRowAriaLabel: getRowAriaLabel, canSelectItem: canSelectItem, checkButtonAriaLabel: checkButtonAriaLabel}));
 	    };
 	    DetailsList.prototype._onColumnIsSizingChanged = function (column, isSizing) {
 	        this.setState({ isSizing: isSizing });
@@ -6311,7 +6320,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.forceUpdate();
 	    };
 	    DetailsList.prototype._forceListUpdates = function () {
-	        this.refs.groups.forceUpdate();
+	        if (this.refs.groups) {
+	            this.refs.groups.forceUpdate();
+	        }
+	        if (this.refs.list) {
+	            this.refs.list.forceUpdate();
+	        }
 	    };
 	    DetailsList.prototype._adjustColumns = function (newProps, forceUpdate, layoutMode) {
 	        var adjustedColumns = this._getAdjustedColumns(newProps, forceUpdate, layoutMode);
@@ -7101,16 +7115,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var css_1 = __webpack_require__(17);
-	var object_1 = __webpack_require__(39);
 	var DetailsRowFields = (function (_super) {
 	    __extends(DetailsRowFields, _super);
 	    function DetailsRowFields(props) {
 	        _super.call(this);
 	        this.state = this._getState(props);
 	    }
-	    DetailsRowFields.prototype.shouldComponentUpdate = function (newProps) {
-	        return !object_1.shallowCompare(this.props, newProps);
-	    };
 	    DetailsRowFields.prototype.componentWillReceiveProps = function (newProps) {
 	        this.setState(this._getState(newProps));
 	    };
@@ -7170,13 +7180,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	__export(__webpack_require__(112));
+	
+	//# sourceMappingURL=GroupedList.js.map
+
+
+/***/ },
+/* 112 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
 	__export(__webpack_require__(113));
+	__export(__webpack_require__(114));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 112 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7186,12 +7209,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var Group_1 = __webpack_require__(113);
+	var Group_1 = __webpack_require__(114);
 	var css_1 = __webpack_require__(17);
-	var List_1 = __webpack_require__(128);
-	var index_1 = __webpack_require__(133);
+	var List_1 = __webpack_require__(129);
+	var index_1 = __webpack_require__(134);
 	var object_1 = __webpack_require__(39);
-	__webpack_require__(137);
+	__webpack_require__(138);
 	var GroupedList = (function (_super) {
 	    __extends(GroupedList, _super);
 	    function GroupedList(props) {
@@ -7346,7 +7369,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 113 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7356,9 +7379,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var GroupFooter_1 = __webpack_require__(114);
-	var GroupHeader_1 = __webpack_require__(121);
-	var List_1 = __webpack_require__(128);
+	var GroupFooter_1 = __webpack_require__(115);
+	var GroupHeader_1 = __webpack_require__(122);
+	var List_1 = __webpack_require__(129);
 	var EventGroup_1 = __webpack_require__(14);
 	var css_1 = __webpack_require__(17);
 	var DEFAULT_DROPPING_CSS_CLASS = 'is-dropping';
@@ -7433,7 +7456,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var count = group ? group.count : items.length;
 	        var startIndex = group ? group.startIndex : 0;
 	        var level = group ? group.level : 0;
-	        return (React.createElement("div", {className: css_1.css('ms-GroupedList-group', this._getDroppingClassName())}, React.createElement(List_1.List, React.__spread({items: items, onRenderCell: function (item, itemIndex) { return onRenderCell(level, item, itemIndex); }, ref: 'list', renderCount: Math.min(count, renderCount), startIndex: startIndex}, listProps))));
+	        return (React.createElement(List_1.List, React.__spread({items: items, onRenderCell: function (item, itemIndex) { return onRenderCell(level, item, itemIndex); }, ref: 'list', renderCount: Math.min(count, renderCount), startIndex: startIndex}, listProps)));
 	    };
 	    Group.prototype._renderSubGroup = function (subGroup, subGroupIndex) {
 	        var _a = this.props, dragDropEvents = _a.dragDropEvents, dragDropHelper = _a.dragDropHelper, eventsToRegister = _a.eventsToRegister, getGroupItemLimit = _a.getGroupItemLimit, groupNestingDepth = _a.groupNestingDepth, items = _a.items, headerProps = _a.headerProps, footerProps = _a.footerProps, listProps = _a.listProps, onRenderCell = _a.onRenderCell, selection = _a.selection, selectionMode = _a.selectionMode, viewport = _a.viewport;
@@ -7507,7 +7530,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 114 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7517,9 +7540,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var Link_1 = __webpack_require__(115);
+	var Link_1 = __webpack_require__(116);
 	var GroupSpacer_1 = __webpack_require__(104);
-	__webpack_require__(120);
+	__webpack_require__(121);
 	var GroupFooter = (function (_super) {
 	    __extends(GroupFooter, _super);
 	    function GroupFooter(props) {
@@ -7546,19 +7569,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 115 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(116));
-	
-	//# sourceMappingURL=Link.js.map
-
-
-/***/ },
 /* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -7567,13 +7577,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	__export(__webpack_require__(117));
-	__export(__webpack_require__(119));
+	
+	//# sourceMappingURL=Link.js.map
+
+
+/***/ },
+/* 117 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(118));
+	__export(__webpack_require__(120));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 117 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7584,8 +7607,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var css_1 = __webpack_require__(17);
-	__webpack_require__(118);
-	var Link_Props_1 = __webpack_require__(119);
+	__webpack_require__(119);
+	var Link_Props_1 = __webpack_require__(120);
 	var Link = (function (_super) {
 	    __extends(Link, _super);
 	    function Link(props) {
@@ -7658,7 +7681,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 118 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7669,7 +7692,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 119 */
+/* 120 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7704,7 +7727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 120 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7715,7 +7738,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 121 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7727,10 +7750,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(1);
 	var Check_1 = __webpack_require__(102);
 	var GroupSpacer_1 = __webpack_require__(104);
-	var Spinner_1 = __webpack_require__(122);
+	var Spinner_1 = __webpack_require__(123);
 	var FocusZone_1 = __webpack_require__(10);
 	var css_1 = __webpack_require__(17);
-	__webpack_require__(127);
+	__webpack_require__(128);
 	var GroupHeader = (function (_super) {
 	    __extends(GroupHeader, _super);
 	    function GroupHeader(props) {
@@ -7812,19 +7835,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 122 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(123));
-	
-	//# sourceMappingURL=Spinner.js.map
-
-
-/***/ },
 /* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -7833,13 +7843,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	__export(__webpack_require__(124));
+	
+	//# sourceMappingURL=Spinner.js.map
+
+
+/***/ },
+/* 124 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
 	__export(__webpack_require__(125));
+	__export(__webpack_require__(126));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 124 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7849,10 +7872,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var Spinner_Props_1 = __webpack_require__(125);
+	var Spinner_Props_1 = __webpack_require__(126);
 	var rtl_1 = __webpack_require__(16);
 	var css_1 = __webpack_require__(17);
-	__webpack_require__(126);
+	__webpack_require__(127);
 	var CIRCLE_COUNT = 8;
 	var PARENT_SIZE_LARGE = 28;
 	var PARENT_SIZE_NORMAL = 20;
@@ -7897,7 +7920,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 125 */
+/* 126 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7911,7 +7934,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 126 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7922,7 +7945,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 127 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7930,19 +7953,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	load_themed_styles_1.loadStyles('.ms-GroupHeader{cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.ms-Fabric .ms-GroupHeader::-moz-focus-inner{border:0}.ms-Fabric .ms-GroupHeader{outline:transparent;position:relative}.ms-Fabric.is-focusVisible .ms-GroupHeader:focus:before{content:\'\';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid "[theme:neutralSecondaryAlt, default: #767676]"}.ms-GroupHeader:hover{background:"[theme:themeLighterAlt, default: #eff6fc]"}.ms-GroupHeader.is-selected{background:"[theme:themeLighter, default: #deecf9]"}.ms-GroupHeader.is-selected:hover{background:"[theme:themeLight, default: #c7e0f4]"}.ms-GroupHeader-check,.ms-GroupHeader-expand{display:inline-block;cursor:default;padding:8px;-webkit-transform:translateY(50%);transform:translateY(50%);margin-top:-10px;box-sizing:border-box;vertical-align:top;background:0 0;border:none}.ms-Fabric .ms-GroupHeader-check::-moz-focus-inner,.ms-Fabric .ms-GroupHeader-expand::-moz-focus-inner{border:0}.ms-Fabric .ms-GroupHeader-check,.ms-Fabric .ms-GroupHeader-expand{outline:transparent;position:relative}.ms-Fabric.is-focusVisible .ms-GroupHeader-check:focus:before,.ms-Fabric.is-focusVisible .ms-GroupHeader-expand:focus:before{content:\'\';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid "[theme:neutralSecondaryAlt, default: #767676]"}.ms-GroupHeader-check{opacity:0}.ms-GroupHeader-check:focus{opacity:1}.ms-GroupHeader.is-selected .ms-GroupHeader-check,.ms-GroupHeader:hover .ms-GroupHeader-check{opacity:1}.ms-GroupHeader-title{padding:14px 6px;display:inline-block;cursor:pointer;outline:0}.ms-GroupHeader-expand{width:36px;height:40px;color:"[theme:neutralSecondary, default: #666666]"}.ms-GroupHeader-expand .ms-Icon{-webkit-transform:rotate(-180deg);transform:rotate(-180deg);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .1s linear;transition:-webkit-transform .1s linear;transition:transform .1s linear;transition:transform .1s linear,-webkit-transform .1s linear}.ms-GroupHeader-expand .ms-Icon.is-collapsed{-webkit-transform:rotate(0);transform:rotate(0)}.ms-GroupHeader-loading{display:inline-block;visibility:hidden;opacity:0;padding:0 16px;vertical-align:middle;-webkit-transition:visibility 367ms,opacity 367ms;transition:visibility 367ms,opacity 367ms}.ms-GroupHeader-loading.is-loading{visibility:visible;opacity:1}');
 	
 	//# sourceMappingURL=GroupHeader.scss.js.map
-
-
-/***/ },
-/* 128 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(129));
-	
-	//# sourceMappingURL=List.js.map
 
 
 /***/ },
@@ -7955,11 +7965,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	__export(__webpack_require__(130));
 	
-	//# sourceMappingURL=index.js.map
+	//# sourceMappingURL=List.js.map
 
 
 /***/ },
 /* 130 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(131));
+	
+	//# sourceMappingURL=index.js.map
+
+
+/***/ },
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7969,10 +7992,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var BaseComponent_1 = __webpack_require__(131);
+	var BaseComponent_1 = __webpack_require__(132);
 	var css_1 = __webpack_require__(17);
 	var object_1 = __webpack_require__(39);
-	var array_1 = __webpack_require__(132);
+	var array_1 = __webpack_require__(133);
 	var scrollUtilities_1 = __webpack_require__(38);
 	var RESIZE_DELAY = 500;
 	var MIN_SCROLL_UPDATE_DELAY = 100;
@@ -8481,7 +8504,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 131 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8615,7 +8638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 132 */
+/* 133 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -8643,7 +8666,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 133 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8651,15 +8674,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	__export(__webpack_require__(106));
-	__export(__webpack_require__(134));
 	__export(__webpack_require__(135));
 	__export(__webpack_require__(136));
+	__export(__webpack_require__(137));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 134 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8845,7 +8868,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 135 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8874,7 +8897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 136 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8885,7 +8908,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var EventGroup_1 = __webpack_require__(14);
-	var SelectionLayout_1 = __webpack_require__(135);
+	var SelectionLayout_1 = __webpack_require__(136);
 	var KeyCodes_1 = __webpack_require__(15);
 	var interfaces_1 = __webpack_require__(106);
 	// Selection definitions:
@@ -9094,7 +9117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 137 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9105,7 +9128,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 138 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9115,7 +9138,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var BaseComponent_1 = __webpack_require__(131);
+	var BaseComponent_1 = __webpack_require__(132);
 	var RESIZE_DELAY = 500;
 	function withViewport(ComposedComponent) {
 	    return (function (_super) {
@@ -9141,25 +9164,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	        WithViewportComponent.prototype.render = function () {
 	            var viewport = this.state.viewport;
-	            return (React.createElement("div", {className: 'ms-Viewport', ref: 'root', style: { minWidth: 1, minHeight: 1 }}, this.state.viewport.height > 0 && (React.createElement(ComposedComponent, React.__spread({ref: 'component', viewport: viewport}, this.props)))));
+	            var isViewportVisible = viewport.width > 0 && viewport.height > 0;
+	            return (React.createElement("div", {className: 'ms-Viewport', ref: 'root', style: { minWidth: 1, minHeight: 1 }}, isViewportVisible && (React.createElement(ComposedComponent, React.__spread({ref: 'component', viewport: viewport}, this.props)))));
 	        };
 	        WithViewportComponent.prototype.forceUpdate = function () {
-	            this.refs.component.forceUpdate();
+	            this._updateViewport(true);
 	        };
 	        WithViewportComponent.prototype._onAsyncResize = function () {
 	            this._updateViewport();
 	        };
-	        WithViewportComponent.prototype._updateViewport = function () {
+	        WithViewportComponent.prototype._updateViewport = function (withForceUpdate) {
+	            var _this = this;
+	            var viewport = this.state.viewport;
 	            var viewportElement = this.refs.root;
 	            var scrollElement = this._findScrollableElement(viewportElement);
 	            var clientRect = viewportElement.getBoundingClientRect();
 	            var scrollRect = scrollElement.getBoundingClientRect();
-	            this.setState({
-	                viewport: {
-	                    width: clientRect.width,
-	                    height: scrollRect.height
+	            var updateComponent = function () {
+	                if (withForceUpdate && _this.refs.component) {
+	                    _this.refs.component.forceUpdate();
 	                }
-	            });
+	            };
+	            var isSizeChanged = (clientRect.width !== viewport.width ||
+	                scrollRect.height !== viewport.height);
+	            if (isSizeChanged) {
+	                this.setState({
+	                    viewport: {
+	                        width: clientRect.width,
+	                        height: scrollRect.height
+	                    }
+	                }, updateComponent);
+	            }
+	            else {
+	                updateComponent();
+	            }
 	        };
 	        WithViewportComponent.prototype._findScrollableElement = function (rootElement) {
 	            var computedOverflow = getComputedStyle(rootElement)['overflow-y'];
@@ -9183,7 +9221,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 139 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9414,7 +9452,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 140 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9422,21 +9460,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	load_themed_styles_1.loadStyles('.ms-DetailsList{position:relative;font-size:12px}.ms-DetailsList BUTTON{font-family:inherit;background-color:transparent}.ms-DetailsList>.ms-FocusZone{display:inline-block;vertical-align:top;min-width:1px;min-height:1px}.ms-DetailsList.is-horizontalConstrained{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;-webkit-transform:translateZ(0);transform:translateZ(0)}.ms-DetailsList-cell{word-break:break-word}.ms-DetailsList .ms-List-cell{min-height:38px}');
 	
 	//# sourceMappingURL=DetailsList.scss.js.map
-
-
-/***/ },
-/* 141 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(142));
-	var index_2 = __webpack_require__(142);
-	exports.default = index_2.Dialog;
-	
-	//# sourceMappingURL=Dialog.js.map
 
 
 /***/ },
@@ -9448,14 +9471,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	__export(__webpack_require__(143));
-	__export(__webpack_require__(151));
-	__export(__webpack_require__(146));
+	var index_2 = __webpack_require__(143);
+	exports.default = index_2.Dialog;
+	
+	//# sourceMappingURL=Dialog.js.map
+
+
+/***/ },
+/* 143 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(144));
+	__export(__webpack_require__(152));
+	__export(__webpack_require__(147));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 143 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9471,15 +9509,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var React = __webpack_require__(1);
-	var index_1 = __webpack_require__(144);
-	var Dialog_Props_1 = __webpack_require__(146);
-	var Overlay_1 = __webpack_require__(147);
+	var index_1 = __webpack_require__(145);
+	var Dialog_Props_1 = __webpack_require__(147);
+	var Overlay_1 = __webpack_require__(148);
 	var Layer_1 = __webpack_require__(27);
-	var DialogFooter_1 = __webpack_require__(151);
+	var DialogFooter_1 = __webpack_require__(152);
 	var css_1 = __webpack_require__(17);
-	var index_2 = __webpack_require__(153);
-	var withResponsiveMode_1 = __webpack_require__(155);
-	__webpack_require__(152);
+	var index_2 = __webpack_require__(154);
+	var withResponsiveMode_1 = __webpack_require__(156);
+	__webpack_require__(153);
 	// @TODO - need to add animations, pending Fabric Team + Coulton work
 	// @TODO - need to change this to a panel whenever the breakpoint is under medium (verify the spec)
 	var _instance = 0;
@@ -9549,20 +9587,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 144 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	__export(__webpack_require__(145));
+	__export(__webpack_require__(146));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 145 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9663,7 +9701,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 146 */
+/* 147 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -9681,19 +9719,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 147 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(148));
-	
-	//# sourceMappingURL=Overlay.js.map
-
-
-/***/ },
 /* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9703,11 +9728,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	__export(__webpack_require__(149));
 	
-	//# sourceMappingURL=index.js.map
+	//# sourceMappingURL=Overlay.js.map
 
 
 /***/ },
 /* 149 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(150));
+	
+	//# sourceMappingURL=index.js.map
+
+
+/***/ },
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9718,7 +9756,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var css_1 = __webpack_require__(17);
-	__webpack_require__(150);
+	__webpack_require__(151);
 	var Overlay = (function (_super) {
 	    __extends(Overlay, _super);
 	    function Overlay() {
@@ -9739,7 +9777,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 150 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9750,7 +9788,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 151 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9760,7 +9798,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	__webpack_require__(152);
+	__webpack_require__(153);
 	var DialogFooter = (function (_super) {
 	    __extends(DialogFooter, _super);
 	    function DialogFooter() {
@@ -9783,7 +9821,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 152 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9794,20 +9832,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 153 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	__export(__webpack_require__(154));
+	__export(__webpack_require__(155));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 154 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9818,7 +9856,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var KeyCodes_1 = __webpack_require__(15);
-	var BaseComponent_1 = __webpack_require__(131);
+	var BaseComponent_1 = __webpack_require__(132);
 	/**
 	 * This adds accessibility to Dialog and Panel controls
 	 **/
@@ -9868,7 +9906,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 155 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9940,19 +9978,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 156 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(157));
-	
-	//# sourceMappingURL=DocumentCard.js.map
-
-
-/***/ },
 /* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9961,17 +9986,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	__export(__webpack_require__(158));
-	__export(__webpack_require__(160));
-	__export(__webpack_require__(162));
-	__export(__webpack_require__(170));
-	__export(__webpack_require__(172));
-	__export(__webpack_require__(174));
+	
+	//# sourceMappingURL=DocumentCard.js.map
+
+
+/***/ },
+/* 158 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(159));
+	__export(__webpack_require__(161));
+	__export(__webpack_require__(163));
+	__export(__webpack_require__(171));
+	__export(__webpack_require__(173));
+	__export(__webpack_require__(175));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 158 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9982,7 +10020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var css_1 = __webpack_require__(17);
-	__webpack_require__(159);
+	__webpack_require__(160);
 	var DocumentCard = (function (_super) {
 	    __extends(DocumentCard, _super);
 	    function DocumentCard() {
@@ -10008,7 +10046,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 159 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10019,7 +10057,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 160 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10030,7 +10068,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var Button_1 = __webpack_require__(44);
-	__webpack_require__(161);
+	__webpack_require__(162);
 	var DocumentCardActions = (function (_super) {
 	    __extends(DocumentCardActions, _super);
 	    function DocumentCardActions() {
@@ -10048,7 +10086,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 161 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10059,7 +10097,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 162 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10070,9 +10108,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var Image_1 = __webpack_require__(56);
-	var Persona_1 = __webpack_require__(163);
+	var Persona_1 = __webpack_require__(164);
 	var css_1 = __webpack_require__(17);
-	__webpack_require__(169);
+	__webpack_require__(170);
 	var DocumentCardActivity = (function (_super) {
 	    __extends(DocumentCardActivity, _super);
 	    function DocumentCardActivity() {
@@ -10109,19 +10147,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 163 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(164));
-	
-	//# sourceMappingURL=Persona.js.map
-
-
-/***/ },
 /* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10130,14 +10155,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	__export(__webpack_require__(165));
+	
+	//# sourceMappingURL=Persona.js.map
+
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
 	__export(__webpack_require__(166));
 	__export(__webpack_require__(167));
+	__export(__webpack_require__(168));
 	
 	//# sourceMappingURL=index.js.map
 
 
 /***/ },
-/* 165 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10149,9 +10187,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(1);
 	var css_1 = __webpack_require__(17);
 	var Image_1 = __webpack_require__(56);
-	var Persona_Props_1 = __webpack_require__(166);
-	var PersonaConsts_1 = __webpack_require__(167);
-	__webpack_require__(168);
+	var Persona_Props_1 = __webpack_require__(167);
+	var PersonaConsts_1 = __webpack_require__(168);
+	__webpack_require__(169);
 	var Persona = (function (_super) {
 	    __extends(Persona, _super);
 	    function Persona() {
@@ -10175,7 +10213,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 166 */
+/* 167 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10220,11 +10258,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Persona_Props_1 = __webpack_require__(166);
+	var Persona_Props_1 = __webpack_require__(167);
 	exports.PERSONA_SIZE = (_a = {},
 	    _a[Persona_Props_1.PersonaSize.tiny] = 'ms-Persona--tiny',
 	    _a[Persona_Props_1.PersonaSize.extraSmall] = 'ms-Persona--xs',
@@ -10266,7 +10304,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10277,7 +10315,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 169 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10288,7 +10326,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 170 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10298,7 +10336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	__webpack_require__(171);
+	__webpack_require__(172);
 	var DocumentCardLocation = (function (_super) {
 	    __extends(DocumentCardLocation, _super);
 	    function DocumentCardLocation() {
@@ -10324,7 +10362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 171 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10335,7 +10373,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 172 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10347,7 +10385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(1);
 	var Image_1 = __webpack_require__(56);
 	var Async_1 = __webpack_require__(23);
-	__webpack_require__(173);
+	__webpack_require__(174);
 	var INTERVAL_DELAY = 3000;
 	var DocumentCardPreview = (function (_super) {
 	    __extends(DocumentCardPreview, _super);
@@ -10407,7 +10445,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10418,7 +10456,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10429,7 +10467,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var EventGroup_1 = __webpack_require__(14);
-	__webpack_require__(175);
+	__webpack_require__(176);
 	var TRUNCATION_SEPARATOR = '&hellip;';
 	var TRUNCATION_MINIMUM_LENGTH = 40;
 	var TRUNCATION_MAXIMUM_LENGTH = 90 - TRUNCATION_SEPARATOR.length;
@@ -10530,7 +10568,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10538,19 +10576,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	load_themed_styles_1.loadStyles('.ms-DocumentCardTitle{padding:8px 16px;color:"[theme:neutralPrimary, default: #333333]";display:block;font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif;font-size:16px;height:36px;line-height:20px;overflow:hidden;word-wrap:break-word}');
 	
 	//# sourceMappingURL=DocumentCardTitle.scss.js.map
-
-
-/***/ },
-/* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(177));
-	
-	//# sourceMappingURL=Dropdown.js.map
 
 
 /***/ },
@@ -10563,11 +10588,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	__export(__webpack_require__(178));
 	
-	//# sourceMappingURL=index.js.map
+	//# sourceMappingURL=Dropdown.js.map
 
 
 /***/ },
 /* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(179));
+	
+	//# sourceMappingURL=index.js.map
+
+
+/***/ },
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10579,9 +10617,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(1);
 	var css_1 = __webpack_require__(17);
 	var EventGroup_1 = __webpack_require__(14);
-	var array_1 = __webpack_require__(132);
+	var array_1 = __webpack_require__(133);
 	var KeyCodes_1 = __webpack_require__(15);
-	__webpack_require__(179);
+	__webpack_require__(180);
 	var _instance = 0;
 	var Dropdown = (function (_super) {
 	    __extends(Dropdown, _super);
@@ -10740,7 +10778,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10748,19 +10786,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	load_themed_styles_1.loadStyles('.ms-Dropdown{color:"[theme:neutralPrimary, default: #333333]";font-family:"Segoe UI Regular WestEuropean","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px;font-weight:400;box-sizing:border-box;margin:0;padding:0;box-shadow:none;margin-bottom:10px;position:relative;outline:0}.ms-Dropdown:active .ms-Dropdown-caretDown,.ms-Dropdown:active .ms-Dropdown-title,.ms-Dropdown:focus .ms-Dropdown-caretDown,.ms-Dropdown:focus .ms-Dropdown-title,.ms-Dropdown:hover .ms-Dropdown-caretDown,.ms-Dropdown:hover .ms-Dropdown-title{color:"[theme:black, default: #000000]"}.ms-Dropdown:active .ms-Dropdown-title,.ms-Dropdown:hover .ms-Dropdown-title{border-color:"[theme:neutralSecondaryAlt, default: #767676]"}.ms-Dropdown:focus .ms-Dropdown-title{border-color:"[theme:themePrimary, default: #0078d7]"}.ms-Dropdown .ms-Label{display:inline-block;margin-bottom:8px}.ms-Dropdown.is-disabled .ms-Dropdown-title{background-color:"[theme:neutralLighter, default: #f4f4f4]";border-color:"[theme:neutralLighter, default: #f4f4f4]";color:"[theme:neutralTertiary, default: #a6a6a6]";cursor:default}@media screen and (-ms-high-contrast:active){.ms-Dropdown.is-disabled .ms-Dropdown-title{border-color:#0f0;color:#0f0}}@media screen and (-ms-high-contrast:black-on-white){.ms-Dropdown.is-disabled .ms-Dropdown-title{border-color:#600000;color:#600000}}.ms-Dropdown.is-disabled .ms-Dropdown-caretDown{color:"[theme:neutralTertiary, default: #a6a6a6]"}@media screen and (-ms-high-contrast:active){.ms-Dropdown.is-disabled .ms-Dropdown-caretDown{color:#0f0}}@media screen and (-ms-high-contrast:black-on-white){.ms-Dropdown.is-disabled .ms-Dropdown-caretDown{color:#600000}}.ms-Dropdown.is-open .ms-Dropdown-items,.ms-Dropdown.ms-Dropdown--open .ms-Dropdown-items{display:block;position:fixed}.ms-Dropdown-select{display:none}.ms-Dropdown-caretDown{color:"[theme:neutralSecondary, default: #666666]";font-size:17px;position:absolute;right:9px;bottom:5px;z-index:1;pointer-events:none}.ms-Dropdown-title{box-sizing:border-box;margin:0;padding:0;box-shadow:none;background:"[theme:white, default: #ffffff]";border:1px solid "[theme:neutralTertiaryAlt, default: #c8c8c8]";cursor:pointer;display:block;height:32px;line-height:30px;padding:0 32px 0 10px;position:relative;overflow:hidden}.ms-Dropdown-items{box-sizing:border-box;margin:0;padding:0;box-shadow:none;box-shadow:0 0 5px 0 rgba(0,0,0,.4);background-color:"[theme:white, default: #ffffff]";display:none;list-style-type:none;position:absolute;width:100%;max-height:200px;max-width:268px;z-index:400;top:0;right:0;bottom:0;overflow-y:scroll}.ms-Dropdown-items:before{content:\'\';position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;border:1px solid "[theme:neutralLight, default: #eaeaea]"}@media screen and (-ms-high-contrast:active){.ms-Dropdown-items{border:1px solid "[theme:white, default: #ffffff]"}}@media screen and (-ms-high-contrast:black-on-white){.ms-Dropdown-items{border:1px solid "[theme:black, default: #000000]"}}.ms-Dropdown-item{box-sizing:border-box;cursor:pointer;display:block;height:40px;line-height:38px;padding:0 10px;position:relative;border:1px solid transparent;white-space:nowrap}@media screen and (-ms-high-contrast:active){.ms-Dropdown-item{border-color:"[theme:black, default: #000000]"}}@media screen and (-ms-high-contrast:black-on-white){.ms-Dropdown-item{border-color:"[theme:white, default: #ffffff]"}}.ms-Dropdown-item:first-child,.ms-Dropdown-item:last-child{height:39px}.ms-Dropdown-item:hover{background-color:"[theme:neutralLight, default: #eaeaea]";color:"[theme:black, default: #000000]"}@media screen and (-ms-high-contrast:active){.ms-Dropdown-item:hover{background-color:#1AEBFF;border-color:#1AEBFF;color:"[theme:black, default: #000000]"}.ms-Dropdown-item:hover:focus{border-color:"[theme:black, default: #000000]"}}@media screen and (-ms-high-contrast:black-on-white){.ms-Dropdown-item:hover{background-color:#37006E;border-color:#37006E;color:"[theme:white, default: #ffffff]"}}.ms-Dropdown-item:active{background-color:"[theme:neutralLight, default: #eaeaea]";border-color:"[theme:themePrimary, default: #0078d7]";color:"[theme:black, default: #000000]"}.ms-Dropdown-item.is-disabled{background:"[theme:white, default: #ffffff]";color:"[theme:neutralTertiary, default: #a6a6a6]";cursor:default;line-height:40px}.ms-Dropdown-item.is-selected,.ms-Dropdown-item.ms-Dropdown-item--selected{background-color:"[theme:themeLight, default: #c7e0f4]";color:"[theme:black, default: #000000]";line-height:40px}.ms-Dropdown-item.is-selected:hover,.ms-Dropdown-item.ms-Dropdown-item--selected:hover{background-color:"[theme:themeLight, default: #c7e0f4]"}@media screen and (-ms-high-contrast:active){.ms-Dropdown-item.is-selected,.ms-Dropdown-item.ms-Dropdown-item--selected{background-color:#1AEBFF;border-color:#1AEBFF;color:"[theme:black, default: #000000]"}.ms-Dropdown-item.is-selected:focus,.ms-Dropdown-item.ms-Dropdown-item--selected:focus{border-color:"[theme:black, default: #000000]"}}@media screen and (-ms-high-contrast:black-on-white){.ms-Dropdown-item.is-selected,.ms-Dropdown-item.ms-Dropdown-item--selected{background-color:#37006E;border-color:#37006E;color:"[theme:white, default: #ffffff]"}}@media (min-width:480px){.ms-Dropdown-items{top:auto;right:auto;bottom:auto;left:auto;max-width:100%}.ms-Dropdown.is-open .ms-Dropdown-items,.ms-Dropdown.ms-Dropdown--open .ms-Dropdown-items{position:absolute}}.ms-Dropdown{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.ms-Dropdown-items{box-shadow:0 0 15px -5px rgba(0,0,0,.4);border:1px solid "[theme:neutralLight, default: #eaeaea]"}.ms-Dropdown-items:before{border:none}.ms-Dropdown-item.is-selected{line-height:38px}');
 	
 	//# sourceMappingURL=Dropdown.scss.js.map
-
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(181));
-	
-	//# sourceMappingURL=Facepile.js.map
 
 
 /***/ },
@@ -10773,11 +10798,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	__export(__webpack_require__(182));
 	
-	//# sourceMappingURL=index.js.map
+	//# sourceMappingURL=Facepile.js.map
 
 
 /***/ },
 /* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(183));
+	
+	//# sourceMappingURL=index.js.map
+
+
+/***/ },
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10787,8 +10825,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var Persona_1 = __webpack_require__(163);
-	__webpack_require__(183);
+	var Persona_1 = __webpack_require__(164);
+	__webpack_require__(184);
 	var Facepile = (function (_super) {
 	    __extends(Facepile, _super);
 	    function Facepile() {
@@ -10835,7 +10873,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10846,19 +10884,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 184 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(144));
-	
-	//# sourceMappingURL=FocusTrapZone.js.map
-
-
-/***/ },
 /* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10866,9 +10891,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	__export(__webpack_require__(111));
+	__export(__webpack_require__(145));
 	
-	//# sourceMappingURL=GroupedList.js.map
+	//# sourceMappingURL=FocusTrapZone.js.map
 
 
 /***/ },
@@ -11240,12 +11265,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* tslint:enable:no-unused-variable */
 	var Panel_Props_1 = __webpack_require__(201);
 	var Layer_1 = __webpack_require__(29);
-	var Overlay_1 = __webpack_require__(147);
-	var BaseComponent_1 = __webpack_require__(131);
+	var Overlay_1 = __webpack_require__(148);
+	var BaseComponent_1 = __webpack_require__(132);
 	var css_1 = __webpack_require__(17);
 	var rtl_1 = __webpack_require__(16);
 	__webpack_require__(202);
-	var index_1 = __webpack_require__(153);
+	var index_1 = __webpack_require__(154);
 	var _instance = 0;
 	var Panel = (function (_super) {
 	    __extends(Panel, _super);
@@ -11487,8 +11512,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	var PeoplePicker_Props_1 = __webpack_require__(206);
-	var Persona_1 = __webpack_require__(163);
-	var Spinner_1 = __webpack_require__(122);
+	var Persona_1 = __webpack_require__(164);
+	var Spinner_1 = __webpack_require__(123);
 	var string_1 = __webpack_require__(207);
 	var FocusZone_1 = __webpack_require__(10);
 	var css_1 = __webpack_require__(17);
@@ -12586,7 +12611,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var React = __webpack_require__(1);
 	__webpack_require__(229);
-	var BaseComponent_1 = __webpack_require__(131);
+	var BaseComponent_1 = __webpack_require__(132);
 	var KeyCodes_1 = __webpack_require__(15);
 	var Label_1 = __webpack_require__(68);
 	var css_1 = __webpack_require__(17);
