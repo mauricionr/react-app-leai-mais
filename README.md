@@ -18,7 +18,7 @@ This sample demonstrates how to start adapting modern web stack development prac
 - Run 'npm install'
 - Run 'gulp serve'
 
-Add following to script editor web part in SharePoint 2016 or 2013.
+Add following to script editor web part in SharePoint 2016 or 2013. 
 
 ```javascript
 
