@@ -1,6 +1,6 @@
 import * as React from 'react';
-import IHelloWorldProps from './IHelloWorldProps';
-export declare class Hello extends React.Component<IHelloWorldProps, {}> {
+import ILeiaMaisProps from './ILeiaMaisProps';
+export declare class LeiaMais extends React.Component<ILeiaMaisProps, {}> {
     _possibleTexts: {
         'en-US': string;
         'pt-BR': string;
