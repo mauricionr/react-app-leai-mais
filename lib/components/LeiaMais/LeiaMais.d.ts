@@ -8,7 +8,7 @@ export declare class LeiaMais extends React.Component<ILeiaMaisProps, {}> {
     _text: string;
     hashvalue: string;
     lang: string;
-    constructor(props: any);
+    constructor(props: ILeiaMaisProps);
     setText(): void;
     componentWillMount(): void;
     render(): JSX.Element;
